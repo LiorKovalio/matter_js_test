@@ -87,15 +87,25 @@
 	});
 	var boxB = Bodies.rectangle(CONFINES.x[1] - 40, CONFINES.y[0] + 40, 80, 80, {
 		render: {
-			fillStyle: 'rgba(0, 0, 255, 0.5)' //'blue'
+			fillStyle: 'rgba(0, 0, 255, 0.5)' // 'blue'
+		}
+	});
+	var rectA = Bodies.rectangle(CONFINES.x[1] - 40, CONFINES.y[0] + 40, 40, 160, {
+		render: {
+			fillStyle: 'rgba(255, 20, 147, 0.5)' // 'deeppink'
 		}
 	});
 	var circA = Bodies.circle(CONFINES.x[1] - 40, CONFINES.y[0] + 40, 40, {
 		render: {
-			fillStyle: 'rgba(255, 255, 0, 0.5)' //'yellow'
+			fillStyle: 'rgba(255, 255, 0, 0.5)' // 'yellow'
 		}
 	});
-	const parts = [boxA, boxB, circA];
+	var triA = Bodies.polygon(CONFINES.x[1] - 50, CONFINES.y[0] + 50, 3, 30, {
+		render: {
+			fillStyle: 'rgba(0, 255, 0, 0.5)' // 'green'
+		}
+	});
+	const parts = [boxA, boxB, rectA, circA, triA];
 	// add all of the bodies to the world
 	Composite.add(engine.world, [...parts, ground, wallLeft, wallRight, ceiling]);
 
