@@ -174,3 +174,11 @@
 </script>
 
 <!-- <button type="button" on:click={shake}>shake</button> -->
+
+<style>
+	:global(body) {
+		display: flex;
+		justify-content: center;
+		background-color: black;
+	}
+</style>
