@@ -119,6 +119,7 @@
 	Runner.run(runner, engine);
 
 	const canvas = document.querySelector('canvas')!;
+	canvas.style.placeSelf = "center";
 	canvas.addEventListener('click', rotate);
 
 	Matter.Events.on(runner, 'afterUpdate', () => {
@@ -187,8 +188,7 @@
 
 <style>
 	:global(body) {
-		display: flex;
-		justify-content: center;
+		display: grid;
 		background-color: black;
 	}
 </style>
